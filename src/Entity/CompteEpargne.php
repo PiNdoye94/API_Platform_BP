@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\CompteEpargneRepository;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -18,7 +20,7 @@ use Doctrine\ORM\Mapping as ORM;
  *       "delete"={},
  *     }
  * )
- * 
+ * @ApiFilter(SearchFilter::class, properties={"id": "exact","num_compte"="exact"})
  * @ORM\Entity(repositoryClass=CompteEpargneRepository::class)
  */
 class CompteEpargne

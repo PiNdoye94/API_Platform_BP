@@ -21,7 +21,7 @@ use Doctrine\ORM\Mapping as ORM;
  *       "delete"={},
  *     }
  * )
- * @ApiFilter(SearchFilter::class, properties={"id": "exact"})
+ * @ApiFilter(SearchFilter::class, properties={"id": "exact","cin"="exact"})
  * @ORM\Entity(repositoryClass=ClientParticulierRepository::class)
  */
 class ClientParticulier
